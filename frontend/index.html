@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="w3-container w3-center">
+        <h2>Lista de Tareas</h2>
+
+        <!-- Mensajes de error o éxito -->
+        <div id="message" class="w3-padding w3-border w3-round w3-margin-bottom" style="display: none;"></div>
+
+        <!-- Formulario para agregar nuevas tareas -->
+        <form id="todoForm" class="w3-margin-bottom">
+            <input class="w3-input w3-border" type="text" id="taskInput" placeholder="Nueva tarea" required>
+            <button class="w3-button w3-green w3-margin-top" type="submit">Agregar</button>
+        </form>
+
+        <!-- Filtros -->
+        <div class="filters w3-margin-bottom">
+            <button onclick="filterTodos('all')" class="w3-button w3-light-grey">Todas</button>
+            <button onclick="filterTodos('completed')" class="w3-button w3-light-grey">Completadas</button>
+            <button onclick="filterTodos('pending')" class="w3-button w3-light-grey">Pendientes</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <ul id="todoList" class="w3-ul"></ul>
+    </div>
+    <script src="api.js"></script>
+    <script src="render.js"></script>
+    <script src="frontDispatcher.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* Estilo para el contenedor principal */
+.w3-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejora para el botón de agregar */
+button.w3-green {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Estilo para las tareas completadas */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    background-color: #f9f9f9;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+}

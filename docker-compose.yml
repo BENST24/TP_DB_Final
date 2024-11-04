@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql-todolist
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: todolist
+      MYSQL_USER: todolist
+      MYSQL_PASSWORD: todolist
+    ports:
+      - "3307:3307"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - todo-network
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-todolist
+    environment:
+      MONGO_INITDB_DATABASE: todolist
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - todo-network
+
+volumes:
+  mysql_data:
+  mongo_data:
+
+networks:
+  todo-network:
